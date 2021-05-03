@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 35%;
+      margin: auto;
+    }
+    input, button {
+      display: inline-block;
+      padding: 25px;
+      border: solid black;
+    }
+    body{
+      background-color:rosybrown;
+    }
+  </style>
+  
+</head>
+  <body>  
+    <div>          
+    <button id ="add">+</button>
+    <input  type ="number" value="1" min = "1">
+    <button id ="subtract">-</button>
+</div>
+<script>
+  let btnAdd = document.querySelector("#add");
+  let btnSubtract = document.querySelector("#subtract");
+  let input = document.querySelector("input");
+  
+  
+  btnAdd.addEventListener('click', () => {
+  input.value = parseInt(input.value) + 1;
+  });
+  
+  btnSubtract.addEventListener('click', () => {
+    if (input.value <= 1) {
+      input.value = 1;
+    }else{ 
+    input.value = parseInt(input.value) - 1;
+  }
+  });
+  </script>
+  </body>
+</html>
